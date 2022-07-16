@@ -4,11 +4,11 @@ click==8.0.4
 dataclasses==0.8
 Django==3.2.14
 djangorestframework==3.13.1
+drf-yasg==1.21.0
 importlib-metadata==4.8.3
 isort==5.10.1
 mypy-extensions==0.4.3
 pathspec==0.9.0
-pkg-resources==0.0.0
 platformdirs==2.4.0
 pytz==2022.1
 sqlparse==0.4.2

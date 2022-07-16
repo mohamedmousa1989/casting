@@ -14,8 +14,16 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import include, path
-from casting_app.views import TalentCreate, CompanyCreate, TalentRetrieveUpdate, ProjectCreate, RoleCreate, ApplicationCreate, ApplicationList
 
+from casting_app.views import (
+    ApplicationCreate,
+    ApplicationList,
+    CompanyCreate,
+    ProjectCreate,
+    RoleCreate,
+    TalentCreate,
+    TalentRetrieveUpdate,
+)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browsable API.
@@ -27,5 +35,5 @@ urlpatterns = [
     path('api/project/create/', ProjectCreate.as_view(), name='project_create'),
     path('api/role/create/', RoleCreate.as_view(), name='role_create'),
     path('api/role/apply/', ApplicationCreate.as_view(), name='application_create'),
-    path('api/role/<int:role_id>/list/', ApplicationList.as_view(), name='application_list')
+    path('api/role/<int:role_id>/list/', ApplicationList.as_view(), name='application_list'),
 ]

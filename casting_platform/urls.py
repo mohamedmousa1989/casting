@@ -50,7 +50,7 @@ urlpatterns = [
     path('api/swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     path('api/talent/create/', TalentCreate.as_view(), name='talent_create'),
-    path('api/talent/<int:pk>/', TalentRetrieveUpdate.as_view(), name='talent_update'),
+    path('api/talent/<int:pk>/', TalentRetrieveUpdate.as_view(), name='talent_get_update'),
     path('api/company/create/', CompanyCreate.as_view(), name='company_create'),
     path('api/project/create/', ProjectCreate.as_view(), name='project_create'),
     path('api/role/create/', RoleCreate.as_view(), name='role_create'),

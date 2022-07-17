@@ -14,3 +14,8 @@ This repository includes all the code for the casting platform.
 * `$ pip install -r requirements.txt`
 * `$ python manage.py migrate`
 * `$ python manage.py runserver`
+
+
+#### Tests
+
+* `$ python manage.py test`

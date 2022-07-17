@@ -6,7 +6,7 @@ from .models import Application, Company, Project, Role, Talent
 class TalentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Talent
-        fields = ['name', 'phone_number', 'age', 'gender', 'ethnicity', 'weight', 'height']
+        fields = ['name', 'email', 'phone_number', 'age', 'gender', 'ethnicity', 'weight', 'height']
 
 
 class CompanySerializer(serializers.ModelSerializer):

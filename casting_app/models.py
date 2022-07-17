@@ -27,10 +27,16 @@ class Company(models.Model):
     email = models.EmailField(db_index=True)
     description = models.TextField()
 
+    def __str__(self):
+        """String representation of the company."""
+
+        return self.name
+
 
 class Project(models.Model):
     """A model representing a project."""
 
+    company = models.ForeignKey(Company, on_delete=models.PROTECT, null=True)
     name = models.CharField(max_length=50)
     description = models.TextField()
     location = models.CharField(max_length=50)
